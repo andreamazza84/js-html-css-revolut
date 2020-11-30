@@ -11,7 +11,7 @@ body{
 .container{
   width: 90%;
   margin:auto;
-  position: relative;
+  /* position: relative; */
 }
 #navbar{
   display: flex;
@@ -32,6 +32,11 @@ ul > li{
   padding: 10px 15px;
   list-style: none;
 }
+#navbar-left > ul > li,
+#navbar-right > ul >li{
+  position: relative;
+}
+
 ul > li > a{
   display: inline-block;
   text-decoration: none;
@@ -78,10 +83,17 @@ ul > li > a:hover{
 }
 .menu > ul > li{
   color: #888;
+
 }
 .active{
   display: inline-block;
 }
+.menu{
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+/*
 .tariffazione{
   position: absolute;
   top: 50px;
@@ -102,3 +114,4 @@ ul > li > a:hover{
   top: 50px;
   left: 845px;
 }
+*/
