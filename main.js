@@ -7,43 +7,38 @@
 
 $(function(){
 
-  var menu = $('.menu');
+  var dropDown = $('a.drop-down');
+  var menu = $('div.menu');
+  var navBarRight =$('#navbar-right');
+dropDown.mouseenter(function(){
+  switch ($(this)[0]) {
+      case dropDown[0]:
+      menu.removeClass('active');
+      $('.tariffazione').addClass('active');
+      break;
+      case dropDown[1]:
+      menu.removeClass('active');
+      $('.conti').addClass('active');
+      break;
+      case dropDown[2]:
+      menu.removeClass('active');
+      $('.prodotti').addClass('active');
+      break;
+      case dropDown[3]:
+      menu.removeClass('active');
+      $('.azienda').addClass('active');
+      break;
+      default:
+      menu.removeClass('active');
+  }
+});
 
-  $('div.tariffazione').click(function(){
-    alert("ciao");
-  });
+menu.mouseleave(function(){
+  menu.removeClass('active');
+});
 
-  $('div.tariffazione').mouseenter(function(){
-    $('div.tariffazione').addClass('active');
-  });
-   //
-   //  menu.each(function(){
-   //   console.log($(this)[0]);
-   //   console.log($('.tariffazione')[0]);
-   //   console.log($(this)[0] === $('.tariffazione')[0]);
-   // });
-   //
-   //
-   //  switch ($(this)[0]) {
-   //    case $('.tariffazione')[0]:
-   //    menu.removeClass('active');
-   //    $('.tariffazione').addClass('active');
-   //    break;
-   //    case $('.conti')[0]:
-   //    menu.removeClass('active');
-   //    $('.conti').addClass('active');
-   //    break;
-   //    case $('.prodotti')[0]:
-   //    menu.removeClass('active');
-   //    $('.prodotti').addClass('active');
-   //    break;
-   //    case $('.azienda')[0]:
-   //    menu.removeClass('active');
-   //    $('.azienda').addClass('active');
-   //    break;
-   //    default:
-   //    menu.removeClass('active');
-   //  }
-  // }); //each
+navBarRight.mouseleave(function(){
+  menu.removeClass('active');
+});
 
 }); //function ready
